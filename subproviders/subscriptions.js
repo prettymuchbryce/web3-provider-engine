@@ -94,7 +94,7 @@ SubscriptionSubprovider.prototype._notificationHandler = function (hexId, subscr
 
   // it seems that web3 doesn't expect there to be a separate error event
   // so we must emit null along with the result object
-  self.emit('data', null, {
+  self.engine.emit('data', null, {
     jsonrpc: "2.0",
     method: "eth_subscription",
     params: {
